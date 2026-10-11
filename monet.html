@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monet</title>
+
+<style>
+body{
+    margin:0;
+    background:#111;
+    font-family:Consolas, monospace;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.ventana{
+    width:350px;
+    background:white;
+    border-radius:8px;
+    box-shadow:0 0 20px rgba(0,0,0,.5);
+}
+
+.titulo{
+    padding:10px;
+    border-bottom:1px solid #ddd;
+    font-size:18px;
+}
+
+.contenido{
+    display:flex;
+    align-items:center;
+    padding:25px;
+    gap:15px;
+}
+
+.icono{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:#4d8cff;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    font-weight:bold;
+}
+
+#texto{
+    font-size:22px;
+}
+
+.botones{
+    text-align:center;
+    padding:15px;
+}
+
+button{
+    padding:8px 24px;
+    font-size:16px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="ventana">
+    <div class="titulo">Monet</div>
+
+    <div class="contenido">
+        <div class="icono">i</div>
+        <div id="texto">...</div>
+    </div>
+
+    <div class="botones">
+        <button onclick="siguiente()">Aceptar</button>
+    </div>
+</div>
+
+<script>
+
+const letra = [
+"...",
+"Igual y dreno",
+"Todas mis bancarias",
+"Y me quedo",
+"Un par de meses",
+"Sin comer",
+"Igual y te regalo",
+"Mi apellido :)",
+"En la forma",
+"De un anillo",
+"De papel...",
+"J y E ❤️"
+];
+
+let i = 0;
+
+function siguiente(){
+    if(i < letra.length-1){
+        i++;
+        document.getElementById("texto").textContent = letra[i];
+    }else{
+        alert("❤️TE AMO MUCHOO MI VIDAAAA❤️");
+    }
+}
+
+</script>
+
+</body>
+</html>
